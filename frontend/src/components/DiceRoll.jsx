@@ -3,7 +3,9 @@ import { mainContext } from '../context/mainProvider'
 
 const DiceRoll = () => {
     let array = [2,2,2,2,2]
-    // const [diceArray, setDiceArray] = useContext(mainContext)
+    const [diceArray, setDiceArray] = useContext(mainContext)
+    setDiceArray(array)
+    console.log(diceArray)
     console.log(array.length)
     while (array.length < 5){
         const num  = Math.ceil(Math.random() * 6 )
