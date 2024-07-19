@@ -16,7 +16,7 @@ const Table = () => {
     setSum(num)
   },[num])
 
-  console.log('win',winCard.bigPoints.bigStreet([1,4,3,2,5]))
+  console.log('win',winCard.bigPoints.bigStreet([5,4,3,6,2]))
 
 
   return (

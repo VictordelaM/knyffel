@@ -125,15 +125,14 @@ const winCard = {
         },lilStreet: (arr)=>{
             let array = [...arr]
             array.sort()
-            if (array == [1,2,3,4] || array == [2,3,4,5] || array == [3,4,5,6] ){return 30}
+            if(array.includes(1) && array.includes(2)&& array.includes(3)&& array.includes(4)||array.includes(2) && array.includes(3)&& array.includes(4)&& array.includes(5)||array.includes(3) && array.includes(4)&& array.includes(5)&& array.includes(6)){return 30}
             else {return 0}
         },bigStreet: (arr)=>{
             let array = [...arr]
             array.sort()
             console.log(array)
             console.log([1,2,3,4,5])
-            if (array[0]<array && array[1] < array[2]&& array[3] < array[4])
-            if (array == [1,2,3,4,5] || array == [2,3,4,5,6]){return 40}
+            if(array.includes(1) && array.includes(2)&& array.includes(3)&& array.includes(4)&& array.includes(5)||array.includes(2) && array.includes(3)&& array.includes(4)&& array.includes(5)&& array.includes(6)){return 40}
             else {return 0}
         },kniffel: (arr)=>{
             let win = false
