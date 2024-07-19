@@ -3,7 +3,6 @@ const winCard = {
         one : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 1){
                     sum += 1
                 }
@@ -12,45 +11,40 @@ const winCard = {
         },two : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 2){
-                    sum += 1
+                    sum += 2
                 }
             });
             return sum 
         },three : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 3){
-                    sum += 1
+                    sum += 3
                 }
             });
             return sum 
         },four : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 4){
-                    sum += 1
+                    sum += 4
                 }
             });
             return sum 
         },five : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 5){
-                    sum += 1
+                    sum += 5
                 }
             });
             return sum 
         },six : (arr) =>{
             let sum = 0
             arr.forEach(i => {
-                console.log(i , sum)
                 if (i == 6){
-                    sum += 1
+                    sum += 6
                 }
             });
             return sum 
@@ -130,8 +124,6 @@ const winCard = {
         },bigStreet: (arr)=>{
             let array = [...arr]
             array.sort()
-            console.log(array)
-            console.log([1,2,3,4,5])
             if(array.includes(1) && array.includes(2)&& array.includes(3)&& array.includes(4)&& array.includes(5)||array.includes(2) && array.includes(3)&& array.includes(4)&& array.includes(5)&& array.includes(6)){return 40}
             else {return 0}
         },kniffel: (arr)=>{
@@ -139,6 +131,7 @@ const winCard = {
             arr.forEach((i)=>{
                 let counter = 0
                 arr.forEach((i2)=>{
+                    
                     if(i==i2){
                         counter += 1
                     }
@@ -146,9 +139,11 @@ const winCard = {
                     win = true
                 }
                 })
-            if (win) {return 50}
-            else {return 0}
             })
+            if (win) {
+                return 50
+            }
+            else {return 0}
         },chance: (arr)=>{
             return arr[0] + arr[1] + arr[2] + arr[3] + arr[4] 
         }

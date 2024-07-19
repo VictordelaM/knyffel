@@ -52,13 +52,6 @@ const DiceRoll = () => {
     <div>
         <p>DiceRoll</p>
         <p>{diceArray}</p>
-        <div>
-            <p>{diceArray[0]}</p>
-            <p>{diceArray[1]}</p>
-            <p>{diceArray[2]}</p>
-            <p>{diceArray[3]}</p>
-            <p>{diceArray[4]}</p>
-        </div>
         <form onSubmit={handleSubmit}>
         <label htmlFor="dice1">dice1</label>
         <input type="checkbox" name="dice1" id="dice1" />

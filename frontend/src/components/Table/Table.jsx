@@ -9,22 +9,43 @@ const Table = () => {
   let num = 0
   diceArray.map((i)=>{
     num += i
-    console.log(num)
   })
-  console.log(sum, 'sum')
   useEffect(()=>{
     setSum(num)
   },[num])
-
-  console.log('win',winCard.bigPoints.bigStreet([5,4,3,6,2]))
-
-
+  console.log(winCard.bigPoints.kniffel(diceArray))
   return (
     <div className='table'>
-        <div>1</div>
-        <div>name</div>
-        <div>punkte</div>
-        <div>{sum}</div>
+        <div className='typ'>
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>three of a kind</p>
+          <p>four of a kind</p>
+          <p>fullHouse</p>
+          <p>lilStreet</p>
+          <p>bigStreet</p>
+          <p>kniffel</p>
+          <p>chance</p>
+        </div>
+        <div className='points'>
+          <p>{winCard.pash.one(diceArray)}</p>
+          <p>{winCard.pash.two(diceArray)}</p>
+          <p>{winCard.pash.three(diceArray)}</p>
+          <p>{winCard.pash.four(diceArray)}</p>
+          <p>{winCard.pash.five(diceArray)}</p>
+          <p>{winCard.pash.six(diceArray)}</p>
+          <p>{winCard.bigPoints.threeOfAKind(diceArray)}</p>
+          <p>{winCard.bigPoints.fourOfAKind(diceArray)}</p>
+          <p>{winCard.bigPoints.fullHouse(diceArray)}</p>
+          <p>{winCard.bigPoints.lilStreet(diceArray)}</p>
+          <p>{winCard.bigPoints.bigStreet(diceArray)}</p>
+          <p>{winCard.bigPoints.kniffel(diceArray)}</p>
+          <p>{winCard.bigPoints.chance(diceArray)}</p>
+        </div>
     </div>
   )
 }
