@@ -3,6 +3,7 @@ import { mainContext } from '../context/mainProvider'
 
 const DiceRoll = () => {
     const { diceArray, setDiceArray } = useContext(mainContext);
+    
     // const {diceChoice, setDiceChoice} = useContext(mainContext)
     // useEffect(()=> {
     //     let startArr = [2, 2, 2, 2, 2]
@@ -38,7 +39,6 @@ const DiceRoll = () => {
         indexArr.map((i)=>{
             const num = Math.ceil(Math.random() * 6)
             dices[i] = num
-            console.log('dices',dices)
         })
        setDiceArray(dices)
     }
@@ -50,18 +50,16 @@ const DiceRoll = () => {
     } 
   return (
     <div>
-        <p>DiceRoll</p>
-        <p>{diceArray}</p>
         <form onSubmit={handleSubmit}>
-        <label htmlFor="dice1">dice1</label>
+        <label htmlFor="dice1">{diceArray[0]}</label>
         <input type="checkbox" name="dice1" id="dice1" />
-        <label htmlFor="dice2">dice2</label>
+        <label htmlFor="dice2">{diceArray[1]}</label>
         <input type="checkbox" name="dice2" id="dice2" />
-        <label htmlFor="dice3">dice3</label>
+        <label htmlFor="dice3">{diceArray[2]}</label>
         <input type="checkbox" name="dice3" id="dice3" />
-        <label htmlFor="dice4">dice4</label>
+        <label htmlFor="dice4">{diceArray[3]}</label>
         <input type="checkbox" name="dice4" id="dice4" />
-        <label htmlFor="dice5">dice5</label>
+        <label htmlFor="dice5">{diceArray[4]}</label>
         <input type="checkbox" name="dice5" id="dice5" />
         <button>roll</button>
         </form>
